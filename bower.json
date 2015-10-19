@@ -1,0 +1,24 @@
+{
+  "name": "component-events",
+  "authors": [
+    "dejakob"
+  ],
+  "description": "events for angular components",
+  "main": "dist/index.html",
+  "moduleType": [],
+  "keywords": [
+    "events"
+  ],
+  "license": "MIT",
+  "homepage": "http://dejakob.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  }
+}

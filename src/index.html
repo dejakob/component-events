@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" ng-app="ComponentEvents">
+<head>
+    <meta charset="UTF-8">
+    <title>Component Events</title>
+</head>
+<body ng-controller="ChatController">
+    <h1>Component Events</h1>
+    <p>This example shows how to use events on components in Angular js.</p>
+
+    <chat-randomizer on-ready="chatRandomizerReady"
+                     on-new-message="chatRandomizerNew"
+    ></chat-randomizer>
+
+    <chat-message-list messages="chatMessages"></chat-message-list>
+
+    <script src="scripts/vendors.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

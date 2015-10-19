@@ -1,0 +1,6 @@
+<h2>Chat message list</h2>
+<ul>
+    <li ng-repeat="message in messages track by $index"
+        ng-bind="message.text"
+    ></li>
+</ul>
