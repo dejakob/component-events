@@ -36,3 +36,21 @@ function messageListReady ()
     $scope.clearMessageList = $scope.messageListEvents.clear;
 }
 ```
+
+### What magic happens in the component?
+It will attach its own methods to the events binding by reference:
+```
+if (typeof $scope.events === 'object') {
+    $scope.events.clear = clear;
+}
+```
+
+It will trigger the onReady event when it got postCompiled:
+```
+function ChatMessageListPostCompiler (scope)
+{
+    if (typeof scope.onReady === 'function') {
+        scope.onReady();
+    }
+}
+```
