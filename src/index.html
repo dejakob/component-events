@@ -12,7 +12,12 @@
                      on-new-message="chatRandomizerNew"
     ></chat-randomizer>
 
-    <chat-message-list messages="chatMessages"></chat-message-list>
+    <chat-message-list on-ready="messageListReady"
+                       events="messageListEvents"
+                       messages="chatMessages"
+    ></chat-message-list>
+
+    <button ng-click="clearMessageList()">Fire clear event to chat-message-list</button>
 
     <script src="scripts/vendors.js"></script>
     <script src="scripts/main.js"></script>

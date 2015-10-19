@@ -14,14 +14,22 @@
             compile: ChatMessageListCompiler,
             scope: {
                 onReady: '=?',
-                messages: '=?'
+                messages: '=?',
+                events: '=?'
             }
         }
     }
 
-    function ChatMessageListController ()
+    function ChatMessageListController ($scope)
     {
+        if (typeof $scope.events === 'object') {
+            $scope.events.clear = clear;
+        }
 
+        function clear ()
+        {
+            $scope.messages = [];
+        }
     }
 
     function ChatMessageListCompiler ()
